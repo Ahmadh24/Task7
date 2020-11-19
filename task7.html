@@ -6,152 +6,132 @@
 
 <body>
 <script type="text/javascript">
-// reverse a string
 console.log("***Reverse a String***");
 
 function reverseThisString(string) {
-// declaring rev variable with empty string
 var rev = '';
-// loop where i is length of the string and i is greater than or equal to i
 for (i = string.length - 1; i >= 0; i--)
-rev += string[i]; // adding string[i] value to rev after concating with it
+rev += string[i];
 
-console.log(rev); // displaying rev array
+console.log(rev); 
 }
-reverseThisString("Hello"); // calling reverseThisString and sending argument
+reverseThisString("Yes"); 
 
 console.log("***Swap Case***");
 
 function swapCase(string) {
 
-// declaring toggle variable with empty string
 var toggle = '';
-var i; // declaring i variable
+var i; 
 
-// loop till is i is less than string length
 for (i = 0; i < string.length; i++) {
 
-// if string[i] value is greater than or equal to 'a' and
-// if string[i] value is less than or equal to 'z' and
-// then make that string[i] to toUpperCase and concat with toggle and store in it
+
 if (string[i] >= 'a' && string[i] <= 'z')
 toggle += string[i].toUpperCase();
 
-// if string[i] value is greater than or equal to 'A' and
-// if string[i] value is less than or equal to 'Z' and
-// then make that string[i] to toLowerCase and concat with toggle and store in it
 else if (string[i] >= 'A' && string[i] <= 'Z')
 toggle += string[i].toLowerCase();
 }
-// displaying toggle
+
 console.log(toggle);
 }
-swapCase("HeLlo"); // calling swapCase and sending argument
+swapCase("AhMaD"); 
 
 console.log("***Fahrenheit to Celsius***");
 
 function toCelcius(array) {
-// declaring i variable
 var i;
-// loop till i is less than array.length
 for (i = 0; i < array.length; i++) {
-// converting Fahrenheit to celcius with following formula
 c = (array[i] - 32) * (5 / 9);
-// printing celcius with 2 decimal point
 console.log(c.toFixed(2));
 }
 }
 
-toCelcius([70, 100, 250]) // calling toCelcius and sending argument
+toCelcius([70, 100, 250]) 
 
 console.log("***Pass and Fail Boolean array***");
 
 
 function passOrFail(array) {
-// declaring arr array variable with empty array
 arr = []
-// loop till i is less than array.length
 for (i = 0; i < array.length; i++) {
-// if array[i] is greater than or equal to 75 then store true in arr[i]
 if (array[i] >= 75)
 arr[i] = true;
-else { //otherwise store false in arr[i]
+else { 
 arr[i] = false;
 }
 }
-// displaying array
+
 console.log(arr)
 }
-// calling passOrFail and sending array as a argument
+
 passOrFail([25, 87, 76, 40, 50])
 
 console.log("***German Numbers***");
 
 function germanNumbers() {
-// declaring arr array variable with empty array
+
 arr = []
-// declaring cardinalNumbers variable with values
+
 const cardinalNumbers = [2, 3, 4, 5, 6];
-// declaring germanNumbers variable with values
 const germanNumbers = ['zwei', 'drei', 'vier', 'funf', 'sechs'];
-// loop till is i is less than 5
+
 for (i = 0; i < 5; i++) {
-// concating cardinalNumbers[i] with germanNumbers[i] and store it in arr[i]
 arr[i] = cardinalNumbers[i] + " is " + germanNumbers[i];
 }
 
-// displaying array
+
 console.log(arr);
 }
-// calling germanNumbers
+
 germanNumbers();
 console.log("***Return Prime Numbers***");
 
 
 function returnPrimeNumbers() {
-// declaring arr array variable with empty array
+
 arr = []
-// declaring k variable with 0
+
 var k = 0;
-// declaring numbers variable with values
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-// loop till i is less than numbers.length
+
 for (i = 0; i <= numbers.length; i++) {
-// declaring flag variable with 0
+
 flag = 0;
 
-// looping through 2 to user input number
+
 for (j = 2; j < i; j++) {
-//checks numbers[i] modulus j equal to 0
+
 if (numbers[i] % j == 0) {
 flag = 1;
 break;
 }
 }
 
-// if number greater than 1 and not divisible by other numbers
+
 if (numbers[i] > 1 && flag == 0) {
-// then store the numbers[i] it in arr[k]
+
 arr[k++] = numbers[i];
 }
 }
-// displaying array
+
 console.log(arr);
 }
 
-// calling returnPrimeNumbers
+
 returnPrimeNumbers();
 console.log("***Showing numbers***");
 
 function csc225Rules() {
-// loop till i is less than equal 100
+
 for (i = 1; i <= 100; i++) {
-// if i modulus 3 not equal to 0 then display it
+
 if (i % 3 != 0)
 console.log(i);
 }
 }
-// calling csc225Rules
+
 csc225Rules()
 </script>
 </body>
